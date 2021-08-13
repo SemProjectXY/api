@@ -4,11 +4,11 @@ import login from '../middlewares/loginRequired';
 
 const router = new Router();
 
-router.get('/', login, aluno.index);
+router.get('/', aluno.index);
 router.post('/', login, aluno.create);
 
 router.put('/:id', login, aluno.update);
 router.delete('/:id', login, aluno.delete);
-router.get('/:id', login, aluno.show);
+router.get('/:id', aluno.show);
 
 export default router;
